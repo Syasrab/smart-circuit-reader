@@ -14,7 +14,7 @@ import glob
 from netlist_parser import parse_netlist, build_circuit, circuit_summary_text
 from circuit_analyzer import analyze_with_gemini
 from ltspice_runner import run_ltspice, get_meas_lines, parse_measurements, parse_gemini_predictions, compare
-
+import time
 
 def run():
     circuit_files = sorted(glob.glob("circuits/*.net"))
@@ -41,6 +41,7 @@ def run():
         except Exception as e:
             print(f"[Gemini call failed: {e}]")
         print()
+        time.sleep(15)  # wait between circuits to avoid hitting Gemini's per-minute limit
 
         if circuit.measurements:
             print("--- LTspice comparison ---")

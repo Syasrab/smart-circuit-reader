@@ -1,0 +1,7 @@
+* First order RC high pass filter
+V1 IN 0 AC 1
+C1 IN OUT 100n
+R1 OUT 0 10k
+.ac dec 20 1 100k
+.meas AC f3db WHEN mag(V(OUT))=0.7071
+.end

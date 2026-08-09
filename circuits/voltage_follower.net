@@ -1,0 +1,7 @@
+* Voltage follower (unity gain buffer), output should exactly equal input
+* E1 models an ideal op-amp using a high-gain dependent source (standard SPICE trick)
+V1 IN 0 DC 3
+E1 OUT 0 IN OUT 1meg
+.op
+.meas OP vout FIND V(OUT)
+.end

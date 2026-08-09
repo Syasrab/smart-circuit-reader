@@ -1,0 +1,5 @@
+* Broken circuit: R1 has zero resistance, directly shorting the voltage source
+V1 IN 0 DC 5
+R1 IN 0 0
+R2 IN OUT 1k
+.end

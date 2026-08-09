@@ -1,0 +1,9 @@
+* Inverting op-amp amplifier, gain = -R2/R1
+* E1 models an ideal op-amp using a high-gain dependent source (standard SPICE trick)
+V1 IN 0 DC 1
+E1 OUT 0 0 N1 1meg
+R1 IN N1 1k
+R2 N1 OUT 9k
+.op
+.meas OP vout FIND V(OUT)
+.end

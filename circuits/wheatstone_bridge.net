@@ -1,0 +1,9 @@
+* Balanced Wheatstone bridge, output voltage should be 0V since all resistors are equal
+V1 A 0 DC 10
+R1 A B 1k
+R2 B 0 1k
+R3 A C 1k
+R4 C 0 1k
+.op
+.meas OP vout FIND V(B)-V(C)
+.end

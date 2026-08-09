@@ -108,7 +108,7 @@ def compare(predicted, measured, tolerance_pct=5.0):
 
 
 if __name__ == "__main__":
-    net_path = "circuits/voltage_divider.net"
+    net_path = "circuits/noninverting_amp.net"
     log_path = run_ltspice(net_path)
     meas_lines = get_meas_lines(net_path)
     measured = parse_measurements(log_path, meas_lines)

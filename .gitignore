@@ -5,3 +5,4 @@ __pycache__/
 *.raw
 *.db
 *.log
+gemini_cache.json

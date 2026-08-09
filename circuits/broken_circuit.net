@@ -1,0 +1,5 @@
+* Broken circuit: R2 connects to a node that nothing else touches, and there is no ground reference
+V1 IN GND1 DC 5
+R1 IN OUT 1k
+R2 OUT FLOAT 1k
+.end

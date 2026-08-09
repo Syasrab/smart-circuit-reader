@@ -1,0 +1,7 @@
+* Simple resistive voltage divider
+V1 IN 0 DC 5
+R1 IN OUT 1k
+R2 OUT 0 1k
+.op
+.meas OP vout FIND V(OUT)
+.end
